@@ -1,6 +1,6 @@
-MAINTAINER Alexander Gil
+FROM phusion/baseimage
 
-FROM phusion/baseimage 
+MAINTAINER Alexander Gil
 
 RUN apt-get update
 
