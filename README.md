@@ -26,5 +26,5 @@ Run the containers
 * create a new spunkybot container using config file `/home/yourname/spunkybot-share/spunkybot.xml` 
 
 ```bash
-sudo docker run -d -v /home/username/Urt-server/spunky-conf/:/root/spunkybot -v /home/username/Urt-server/q3ut4:/root/q3ut4 --name="spunkybot" spunkybot /root/spunkybot
+sudo docker run -d -v /home/username/Urt_server/spunky-conf:/root/spunkybot -v /home/username/Urt_server/q3ut4:/root/q3ut4 --name="spunkybot" --net=host spunkybot /root/spunkybot
 ```
