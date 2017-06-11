@@ -2,10 +2,10 @@ FROM phusion/baseimage
 
 MAINTAINER Alexander Gil
 
-RUN apt-get update
-
 # spunkybot
-RUN apt-get -y install git python-dev build-essential libsqlite3-dev 
+RUN apt-get update && \
+    apt-get -y install git python-dev build-essential libsqlite3-dev && \
+    apt-get clean
 RUN git clone https://github.com/SpunkyBot/spunkybot.git /opt/spunkybot
 RUN cd /opt/spunkybot && git checkout 1.8.0
 RUN chmod +x /opt/spunkybot/spunky.py
